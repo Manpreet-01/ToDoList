@@ -1,0 +1,35 @@
+<%- include('header'); -%>
+
+	<!-- <% if(listTitle === "Satur" || listTitle === "Sun"){ %> -->
+		<!-- <h1 style="color:purple">It's a <%= listTitle %>day ToDo List</h1> -->
+	<!-- <% }else{ %> -->
+		<!-- <h1 style="color:blue">It's a <%= listTitle %>day ToDo List</h1> -->
+	<!-- <% } %> -->
+	<!-- every line has own scriplet <% %> tag -->
+	<!-- <p>this is a paragraph</p> -->
+	
+	
+	
+	<div class="box" id="heading">
+		<h1><%= listTitle %></h1>
+	</div>
+	
+	<div class="box">
+		
+		<% for(var i=0; i<newListItems.length; i++){ %>
+			<div class="item">
+			<input type="checkbox">
+				<p> <%= newListItems[i] %> </p>
+			</div>
+		<% } %>
+		
+		
+		<form clsss="item" action="/" method="post">
+			<input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+			<button type="submit" name="list" value="<%= listTitle %>">+</button>
+		</form>
+		
+	</div>
+		
+
+<%- include('footer'); -%>
