@@ -7,7 +7,7 @@
 module.exports.getDate = getDate;
 module.exports.getDay = getDay ;
 
-function getDate(){
+var getDate = function(){
 	
 	var today = new Date();
 	const currDay = today.getDay();
@@ -38,7 +38,7 @@ function getDate(){
 
 
 
-function getDay(){
+let getDay = function(){
 	
 	var today = new Date();
 	const currDay = today.getDay();
