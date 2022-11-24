@@ -4,7 +4,7 @@
 
 // to export multi function
 
-module.exports.getDate = function (){
+exports.getDate = function (){
 	
 	var today = new Date();
 	const currDay = today.getDay();
@@ -35,7 +35,7 @@ module.exports.getDate = function (){
 
 
 
-module.exports.getDay = function (){
+exports.getDay = function (){
 	
 	var today = new Date();
 	const currDay = today.getDay();
